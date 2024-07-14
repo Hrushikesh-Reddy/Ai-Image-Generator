@@ -1,0 +1,46 @@
+#txta, .geni {
+    width: 400px;
+    height: 400px;
+    border:2px solid rebeccapurple;
+    background-color: #242424;
+    border-radius:10px;
+    margin:0.4rem;
+    overflow-y: hidden;
+    margin-top:4rem;
+}
+
+#txta{
+    outline:none;
+    color:whitesmoke;
+    padding:1rem;
+    font-size: large;
+}
+
+#txta::placeholder{
+    color:gray;
+}
+
+.cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.bt{
+    width:100px;
+    padding:10px;
+    font-size: medium;
+    border-radius: 5px;
+    background-color: rebeccapurple;
+    color:whitesmoke;
+    border:none;
+    margin:0.5rem;
+    margin-left:25vw;
+
+}
+
+#fimg{
+    max-width: 100%;
+    border-radius:7px;
+}
