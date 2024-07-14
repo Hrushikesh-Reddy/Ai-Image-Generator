@@ -10,7 +10,7 @@ async function generate() {
     alert('Enter a valid prompt!!');
     return; 
   }
-  let obj = await fetch(`http://localhost:5000/genpage/api/generate/?prompt=${prompt}`)
+  let obj = await fetch(`https://team-c3rb.onrender.com/genpage/api/generate/?prompt=${prompt}`)
   let res = await obj.json()
   img.src = res.img_url;
   img.id = "fimg";
