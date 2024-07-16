@@ -6,7 +6,7 @@ async function generate(){
     const arr = await fetch('https://team-c3rb.onrender.com/data');
     const data = await arr.json();
     console.log(data)
-    for(let i = 0; i < data.length; i++){
+    for(let i = data.length-1; i >= 0; i--){
         let obj = data[i];
         let text = obj.prompt;
         console.log(text.length)
