@@ -35,11 +35,11 @@ async function gene(prompt) {
     seed: 24698704,
   };
 
-/*     let res = await client.generate(model, input);
+    let res = await client.generate(model, input);
   console.log(res);
-  return res.output[0]; */
+  return res.output[0];
 
-  return new Promise((res, rej) => {
+/*   return new Promise((res, rej) => {
     setTimeout(() => {
       res(
         "https://processed-model-result.s3.us-east-2.amazonaws.com/1a0669e1-5282-4540-9452-a6d3e81ead96_0.png"
@@ -47,7 +47,7 @@ async function gene(prompt) {
     }, 1000);
   }).then((val) => {
     return val;
-  }, null);
+  }, null); */
 }
 
 module.exports = { genrender, genimg };
