@@ -3,7 +3,7 @@ const grid = document.getElementById('igrid')
 
 
 async function generate(){
-    const arr = await fetch('http://localhost:4000/data');
+    const arr = await fetch('https://team-c3rb.onrender.com/data');
     const data = await arr.json();
     console.log(data)
     for(let i = 0; i < data.length; i++){
