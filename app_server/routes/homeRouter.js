@@ -4,5 +4,6 @@ const homeC = require("../controllers/homeController");
 
 router.get("/", homeC.hRender);
 router.get("/data", homeC.hdata);
+router.get("/data", homeC.hdata);
 
 module.exports =  router
