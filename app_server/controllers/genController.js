@@ -32,8 +32,7 @@ async function gene(prompt) {
     steps: 30,
     aspect_ratio: "square",
     guidance_scale: 7.5,
-    seed: 69696,
-    style: "anime",
+    seed: 24698704,
   };
 
 /*     let res = await client.generate(model, input);
