@@ -2,6 +2,7 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.423);
     background-color: white;
     border-radius: 16px;
+    max-width: 350px;
 }
 
 .card p {
@@ -20,7 +21,7 @@
     padding:1rem;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 4;
+    grid-template-rows: minmax(4, auto-fill);
     column-gap: 2rem;
     row-gap: 2rem;
     place-items: center;
@@ -46,10 +47,98 @@ padding:1rem;
 font-size:large;
 font-weight: 500;
 margin:0.5rem;
-margin-top:2rem;
 transition:all 500ms;
 }
 
 #stbtn:hover{
     scale: 105%;
+}
+
+.ham{
+    position: fixed;
+    top:12px;
+    left:10px
+}
+
+
+@media only screen and (min-width: 344px) and (max-width: 767px) {
+    .ifsg{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin:0;
+        padding: 0;
+    }
+    header{
+        justify-content: center;
+    }
+    h1{
+        margin:0;
+        padding:0;
+        color:rgba(0, 0, 0, 0.534);
+    }
+
+    .navm{
+        position: fixed;
+        left:0;
+        top:0;
+        z-index: 9999;
+
+        display: none;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+       
+        background-color: rgba(255, 255, 255, 0.401);
+        width:75%;
+        height: 100%;
+        backdrop-filter: blur(80px);
+    }
+
+    .navm li{
+        font-size: larger;
+        border-bottom: 2px solid black;
+        width:70%;
+        padding: 0;
+        margin: 1rem;
+        transition: all 500ms;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .ham{
+        display: block;
+    }
+
+    .card{
+        max-width: 300px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) and (max-width: 1279px){
+    .ifsg{
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        min-width: 250px;
+        max-width:300px;
+       /*  width: minmax(250px, 300px); */
+    }
+    .ham, .navm{
+        display:none;
+    }
+
+}
+
+@media only screen and (min-width: 1280px) and (max-width: 2000px){
+    .card{
+        max-width: 325px;
+    }
+    .ham, .navm{
+        display: none;
+    }
 }

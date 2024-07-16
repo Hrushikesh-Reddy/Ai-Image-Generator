@@ -3,20 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/public/css/defaults.css">
-    <link rel="stylesheet" href="/public/css/genpage.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="public/css/defaults.css">
+    <link rel="stylesheet" href="public/css/genpage.css">
+    <title>Team 8</title>
 </head>
 <body>
     <header>
-        <h1>Project</h1>
-        <ul>
+        <div class="showOnMobile ham" onclick="show()"><svg xmlns="http://www.w3.org/2000/svg" height="38" viewBox="0 96 960 960" width="48"><path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/></svg></div>
+        <h1>Ai-Image-Generator</h1>
+        <ul class="nav hideOnMobile">
             <li><a href="/" class="menu-text">Home</a></li>
             <li><a href="/genpage" class="menu-text">Generate</a></li>
-            <li><a href="about" class="menu-text">About</a></li>
+            <li><a href="/about" class="menu-text">About</a></li>
             <li><a href="https://github.com/Hrushikesh-Reddy/team" class="menu-text">Github</a></li>
         </ul>
     </header>
+
+    <ul class="nav navm" id="navm">
+        <svg onclick="hide()" style="margin: 1rem;"  xmlns="http://www.w3.org/2000/svg" height="28" viewBox="0 96 960 960" width="48"><path d="m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z"/></svg>
+        <li><a href="/" class="menu-text">Home</a></li>
+        <li><a href="/genpage" class="menu-text">Generate</a></li>
+        <li><a href="/about" class="menu-text">About</a></li>
+        <li><a href="https://github.com/Hrushikesh-Reddy/team" class="menu-text">Github</a></li>
+    </ul>
 <!-- end of defaults -->
  
 <div class="cont">

@@ -1,8 +1,8 @@
 require("dotenv").config();
 const { MongoClient } = require("mongodb");
 
-const client = new MongoClient(process.env.MONGO)
 async function save(link, prompt){
+    const client = new MongoClient(process.env.MONGO)
     try{
         const db = client.db('Site');
         const coll = db.collection('home');
@@ -14,4 +14,23 @@ async function save(link, prompt){
     }
 }
 
-module.exports = {save};
+async function getH(){
+    const client = new MongoClient(process.env.MONGO)
+    try{
+        const db = client.db('Site');
+        const coll = db.collection('home');
+        let cur = coll.find().limit(30);
+        const res = new Array();
+        while(await cur.hasNext()){
+            res.push(await cur.next());
+        }
+        return res;
+       // console.log(res)
+    }catch(e){
+        console.error(e);
+    }finally{
+        await client.close();
+    }
+}
+
+module.exports = {save, getH};

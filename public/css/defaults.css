@@ -8,8 +8,9 @@
     overflow-x: hidden;
 }
 
-body{
-    background-image: url("/public/assets/bg7.jpg");
+html{
+    min-height: 100%;
+    background-image: url("../assets/bg7.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -22,6 +23,7 @@ header{
     align-items: center;
     padding: 0.5rem;
     background-color: rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.395);
     backdrop-filter: blur(5px);
     border-bottom: 2px solid  rgb(255, 255, 255, 0.2);
 }
@@ -36,7 +38,9 @@ ul{
 
 h1{
     color: white;
+    color:rgba(0, 0, 0, 0.534);
     padding-left: 20vw ;
+    font-size: 1.5rem;
 }
 
 ul li {
@@ -65,5 +69,3 @@ a, a:visited{
 .menu-text:hover:after {
     width: 100%;
 }
-
-/*end of defaults*/
