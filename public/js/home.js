@@ -10,7 +10,7 @@ async function generate(){
     for(let i = data.length-1; i >= 0; i--){
         let obj = data[i];
         let text = obj.prompt;
-        console.log(text.length)
+        /* console.log(text.length) */
         let div = document.createElement('div'), img = document.createElement('img'), p = document.createElement('p'), txt = document.createTextNode(text.length > 75 ? text.substring(0, 75)+'...' : text+'.');
         div.className='card'
 /*         p.id=i;
