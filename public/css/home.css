@@ -66,7 +66,6 @@ transition:all 500ms;
         display:flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
         margin:0;
         padding: 0;
     }
@@ -89,12 +88,15 @@ transition:all 500ms;
         display: none;
         justify-content: start;
         align-items: flex-start;
-        flex-direction: column;
        
         background-color: rgba(255, 255, 255, 0.401);
         width:75%;
         height: 100%;
         backdrop-filter: blur(80px);
+    }
+
+    .ifsg, .navm{
+        flex-direction: column;
     }
 
     .navm li{

@@ -58,17 +58,14 @@
         justify-content: center;
     }
     h1{
-        margin:0;
         padding:0;
-        color:rgba(0, 0, 0, 0.534);
-    
     }
 
     .navm{
         position: fixed;
         left:0;
         top:0;
-        z-index: 9999;
+        z-index: 999;
 
         display: none;
         justify-content: start;
@@ -104,18 +101,9 @@
 }
 
 
-@media only screen and (min-width: 768px) and (max-width: 1279px){
+@media only screen and (min-width: 768px) and (max-width: 2000px){
     .ham, .navm{
         display:none;
-    }
-    header{
-        padding: 0.5rem;
-    }
-}
-
-@media only screen and (min-width: 1280px) and (max-width: 2000px){
-    .ham, .navm{
-        display: none;
     }
     header{
         padding: 0.5rem;
