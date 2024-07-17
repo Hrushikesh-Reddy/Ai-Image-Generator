@@ -17,7 +17,6 @@ const genimg = async (req, res) => {
 
   res.end(JSON.stringify({ img_url: val }));
   db.save(val, prompt);
-  log(val);
 };
 
 async function gene(prompt) {
