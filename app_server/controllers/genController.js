@@ -6,7 +6,7 @@ const db = require("../model/database")
 const client = new MonsterApiClient(process.env.API_KEY);
 
 const genrender = async (req, res) => {
-  res.sendFile(path.join(__dirname, "..", "views", "genpage.html"));
+  res.render('genpage')
 };
 
 const genimg = async (req, res) => {

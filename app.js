@@ -1,8 +1,12 @@
 require("dotenv").config();
 const express = require("express");
 const morgan = require("morgan")
+const path = require('path')
 
 const app = express();
+
+app.set('views', path.join(__dirname, 'app_server', 'views'));
+app.set('view engine', 'jade');
 
 const genrouter = require('./app_server/routes/genRouter')
 const homeRouter = require("./app_server/routes/homeRouter")

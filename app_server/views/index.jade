@@ -1,0 +1,54 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    link(rel='stylesheet', href='public/css/defaults.css')
+    link(rel='stylesheet', href='public/css/home.css')
+    title Team 8
+  body
+    header
+      .showOnMobile.ham(onclick='show()')
+        svg(xmlns='http://www.w3.org/2000/svg', height='28', viewBox='0 96 960 960', width='48')
+          path(d='M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z')
+      h1 Ai-Image-Generator
+      ul.nav.hideOnMobile
+        li
+          a.menu-text(href='/') Home
+        li
+          a.menu-text(href='/genpage') Generate
+        li
+          a.menu-text(href='/about') About
+        li
+          a.menu-text(href='https://github.com/Hrushikesh-Reddy/team') Github
+    ul#navm.nav.navm
+      svg(onclick='hide()', style='margin: 1rem;', xmlns='http://www.w3.org/2000/svg', height='28', viewBox='0 96 960 960', width='48')
+        path(d='m249 849-42-42 231-231-231-231 42-42 231 231 231-231 42 42-231 231 231 231-42 42-231-231-231 231Z')
+      li
+        a.menu-text(href='/') Home
+      li
+        a.menu-text(href='/genpage') Generate
+      li
+        a.menu-text(href='/about') About
+      li
+        a.menu-text(href='https://github.com/Hrushikesh-Reddy/team') Github
+    .cont
+      button#stbtn.menu-text
+        a(href='/genpage') Start generating -&gt;
+      h2.rg Recently generated
+      #igrid.ifsg
+        //
+          <div class="card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTxMFMIlQpKPsk38eecew-UkLKcVc_Pcr1duw&s" alt="" width="350" height="250">
+          <p>This is a prompt example......</p>
+          </div>
+    script(src='public/js/home.js')
+    script.
+      function show(){
+      let elm = document.getElementById('navm');
+      elm.style.display = 'flex'
+      }
+      function hide(){
+      let elm = document.getElementById('navm');
+      elm.style.display = 'none'
+      }

@@ -2,7 +2,7 @@ const path = require("path");
 const db = require("../model/database");
 
 const hRender = async (req, res) => {
-    res.sendFile(path.join(__dirname, "..", "views", "index.html"));
+    res.render('index');
 }
 
 const hdata = async (req, res) => {
