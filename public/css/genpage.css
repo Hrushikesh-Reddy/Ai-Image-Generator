@@ -48,10 +48,10 @@
 
 .ham{
     position: fixed;
-    top:5px;
-    left:10px
+    top:14px;
+    left:10px;
+    opacity: 60%;
 }
-
 
 @media only screen and (min-width: 344px) and (max-width: 767px) {
     header{
@@ -108,11 +108,16 @@
     .ham, .navm{
         display:none;
     }
-
+    header{
+        padding: 0.5rem;
+    }
 }
 
 @media only screen and (min-width: 1280px) and (max-width: 2000px){
     .ham, .navm{
         display: none;
+    }
+    header{
+        padding: 0.5rem;
     }
 }

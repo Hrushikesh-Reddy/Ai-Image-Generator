@@ -1,15 +1,13 @@
 require("dotenv").config();
 const { default: MonsterApiClient } = require("monsterapi");
-const client = new MonsterApiClient(process.env.API_KEY);
 const path = require("path");
 const db = require("../model/database")
-const { log } = require("./logger");
+
+const client = new MonsterApiClient(process.env.API_KEY);
 
 const genrender = async (req, res) => {
-  /* res.writeHead(200, { "Content-Type": "text/html" }); */
   res.sendFile(path.join(__dirname, "..", "views", "genpage.html"));
 };
-/* console.log(path.join(__dirname, "..", "views", "index.html")) */
 
 const genimg = async (req, res) => {
   const prompt = req.query.prompt;
