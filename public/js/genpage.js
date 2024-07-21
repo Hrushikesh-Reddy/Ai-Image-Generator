@@ -12,7 +12,8 @@ async function generate() {
   }
   try {
     let obj = await fetch(
-      `https://team-c3rb.onrender.com/genpage/api/generate/?prompt=${prompt}`
+        `https://team-c3rb.onrender.com/genpage/api/generate/?prompt=${prompt}`
+/*       `http://localhost:3000/genpage/api/generate/?prompt=${prompt}` */
     );
     let res = await obj.json();
     img.src = res.img_url;

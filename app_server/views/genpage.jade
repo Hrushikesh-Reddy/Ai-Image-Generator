@@ -34,10 +34,12 @@ html(lang='en')
         a.menu-text(href='https://github.com/Hrushikesh-Reddy/team') Github
     // end of defaults
     .cont
-      textarea#txta(name='', placeholder='enter prompt')
-      #frame.geni
-    button#btn.bt Generate
-    button#clr.bt Clear
+      .fcont
+        textarea#txta(name='', placeholder='enter prompt')
+        #frame.geni
+      .bcont
+        button#btn.bt Generate
+        button#clr.bt Clear
     script(src='/public/js/genpage.js')
     script.
       function show(){

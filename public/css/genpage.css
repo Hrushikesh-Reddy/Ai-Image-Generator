@@ -98,8 +98,32 @@
     .card{
         max-width: 300px;
     }
+    .cont{
+        flex-direction: column;
+        margin:0.5rem;
+        max-width: 100vw;
+    }
+    #txta, .geni {
+        width:90vw;
+    }
+    .geni{
+        margin:0;
+    }
+    #txta{
+        height:20vh;
+        overflow-y: scroll;
+    }
+    .bcont{
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        max-width: 100%;
+    }
+    .bt{
+        margin:  0.5rem;
+        padding: 1rem;
+    }
 }
-
 
 @media only screen and (min-width: 768px) and (max-width: 2000px){
     .ham, .navm{
@@ -107,5 +131,20 @@
     }
     header{
         padding: 0.5rem;
+    }
+    .cont{
+        flex-direction: column;
+    }
+    .fcont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bt{
+        margin:  0.5rem;
+        padding: 1rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
     }
 }
