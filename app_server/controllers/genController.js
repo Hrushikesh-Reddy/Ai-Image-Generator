@@ -18,6 +18,7 @@ const genimg = async (req, res) => {
     db.save(val, prompt);
   } catch (e) {
     console.error(e);
+    res.end(e);
   }
 };
 
