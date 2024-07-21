@@ -6,15 +6,21 @@ const tarea = document.getElementById("txta");
 async function generate() {
   const img = document.createElement("img");
   const prompt = tarea.value;
-  if(prompt.trim() === ""){
-    alert('Enter a valid prompt!!');
-    return; 
+  if (prompt.trim() === "") {
+    alert("Enter a valid prompt!!");
+    return;
   }
-  let obj = await fetch(`https://team-c3rb.onrender.com/genpage/api/generate/?prompt=${prompt}`)
-  let res = await obj.json()
-  img.src = res.img_url;
-  img.id = "fimg";
-  frame.appendChild(img);
+  try {
+    let obj = await fetch(
+      `https://team-c3rb.onrender.com/genpage/api/generate/?prompt=${prompt}`
+    );
+    let res = await obj.json();
+    img.src = res.img_url;
+    img.id = "fimg";
+    frame.appendChild(img);
+  } catch (e) {
+    alert(e);
+  }
 }
 
 function clean() {
