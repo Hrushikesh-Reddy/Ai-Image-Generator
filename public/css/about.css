@@ -1,0 +1,129 @@
+.container {
+    border:2px solid rebeccapurple;
+    background-color: rgba(255, 255, 255, 0.804);
+    max-width: 1200px;
+    margin: 1rem auto;
+    border-radius: 10px;
+    padding: 2rem;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+  }
+
+  .features, .mission {
+    margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+
+    p {
+      font-size: 1rem;
+    }
+
+    .container {
+      padding: 1rem;
+    }
+  }
+
+@media only screen and (min-width: 344px) and (max-width: 767px) {
+    header{
+        justify-content: center;
+    }
+    h1{
+        padding:0;
+    }
+
+    .navm{
+        position: fixed;
+        left:0;
+        top:0;
+        z-index: 999;
+
+        display: none;
+        justify-content: start;
+        align-items: flex-start;
+        flex-direction: column;
+       
+        background-color: rgba(255, 255, 255, 0.401);
+        width:75%;
+        height: 100%;
+        backdrop-filter: blur(80px);
+    }
+
+    .navm li{
+        font-size: larger;
+        border-bottom: 2px solid black;
+        width:70%;
+        padding: 0;
+        margin: 1rem;
+        transition: all 500ms;
+    }
+
+    .nav{
+        display: none;
+    }
+
+    .ham{
+        display: block;
+    }
+
+    .card{
+        max-width: 300px;
+    }
+    .cont{
+        flex-direction: column;
+        margin:0.5rem;
+        max-width: 100vw;
+    }
+    #txta, .geni {
+        width:90vw;
+    }
+    .geni{
+        margin:0;
+    }
+    #txta{
+        height:20vh;
+        overflow-y: scroll;
+    }
+    .bcont{
+        display: flex;
+        flex-direction: row;
+        flex-flow: wrap;
+        max-width: 100%;
+    }
+    .bt{
+        margin:  0.5rem;
+        padding: 1rem;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 2000px){
+    .ham, .navm{
+        display:none;
+    }
+    header{
+        padding: 0.5rem;
+    }
+    .cont{
+        flex-direction: column;
+    }
+    .fcont{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .bt{
+        margin:  0.5rem;
+        padding: 1rem;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
