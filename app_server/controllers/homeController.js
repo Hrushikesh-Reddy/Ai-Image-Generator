@@ -11,7 +11,7 @@ const hdata = async (req, res) => {
 }
 
 const about = (req, res) => {
-    res.end('<h1>Work in progress</h1>');
+    res.render('about')
 }
 
 module.exports = { hRender, hdata, about }
