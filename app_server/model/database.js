@@ -1,35 +1,31 @@
 require("dotenv").config();
-const { MongoClient } = require("mongodb");
+const mongoose = require("mongoose");
+const { home } = require("./schema");
+
+const URL = process.env.MONGO;
 
 async function save(link, prompt) {
-  const client = new MongoClient(process.env.MONGO);
   try {
-    const db = client.db("Site");
-    const coll = db.collection("home");
-    await coll.insertOne({ link: link, prompt: prompt });
+    await mongoose.connect(URL);
+    await home.insertMany([{ link: link, prompt: prompt }]);
   } catch (e) {
     console.error(e);
-  } finally {
+  } /*  finally {
     await client.close();
-  }
+  } */
 }
 
 async function getH() {
-  const client = new MongoClient(process.env.MONGO);
   try {
-    const db = client.db("Site");
-    const coll = db.collection("home");
-    let cur = coll.find().limit(30);
-    const res = new Array();
-    while (await cur.hasNext()) {
-      res.push(await cur.next());
-    }
-    return res;
+    await mongoose.connect(URL);
+    let cur = await home.find().limit(30);
+    //console.log(cur+"here")
+    return cur;
   } catch (e) {
     console.error(e);
-  } finally {
+  } /* finally {
     await client.close();
-  }
+  } */
 }
 
 module.exports = { save, getH };

@@ -1,5 +1,5 @@
 const path = require("path");
-const db = require("../model/database");
+const db = require("../../app_server/model/database");
 
 const hRender = async (req, res) => {
     res.render('index');
